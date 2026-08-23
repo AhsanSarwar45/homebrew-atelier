@@ -14,18 +14,18 @@ class Atelier < Formula
   on_macos do
     on_arm do
       url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.13.0/atelier-darwin-arm64"
-      sha256 "598ca7cef79c302a86640b18d23b8462f71ffef67191c5e0ec741d512e58e815"
+      sha256 "ad8663d264340dc61d2695ed530ad0ada3b2cae2f6c3fd39e9081b9b1366f77e"
     end
     on_intel do
       url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.13.0/atelier-darwin-x64"
-      sha256 "bbed7648251bf80894d48bad449db884a757f3c4b78d79548cbfbcefa7b291ef"
+      sha256 "6d85ba5467a67b61ff96accab9da0e86d881c50ec4bb91fae8711bc9e043fdc3"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.13.0/atelier-linux-x64"
-      sha256 "6623b97b938556b6092f28749b1939073dbf5c62659623167e7fd5628af0e735"
+      sha256 "8be4959200b7610c76e3db4222919e8b3400b9006a8c823d4caf2c941c5e1e42"
     end
   end
 
