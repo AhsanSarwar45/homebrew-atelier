@@ -1,7 +1,7 @@
 class Atelier < Formula
   desc "Visual board and multi-project dashboard for tracked work"
   homepage "https://github.com/AhsanSarwar45/atelier"
-  version "0.13.1"
+  version "0.14.0"
   license "MIT"
 
   # No `depends_on "node"`. Homebrew would install its own node and link it
@@ -13,19 +13,19 @@ class Atelier < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.13.1/atelier-darwin-arm64"
-      sha256 "08f863cbcad176cb03bb88c24775262c233cabd1a3c9c5f4831eb6a211abed67"
+      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.14.0/atelier-darwin-arm64"
+      sha256 "3fd8abe2185f37664ecc6f31f1daac04ce5c0f4d055710f6b042686b1917c6b9"
     end
     on_intel do
-      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.13.1/atelier-darwin-x64"
-      sha256 "4d6d95a9e2aaf2e5563d3902934d4c9d9ae5926c30508547caded0a6edd6fdb9"
+      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.14.0/atelier-darwin-x64"
+      sha256 "1f098a154464b9a5cec2a47f514aa766d346f7de77083e236c89a5ff8c8a98bb"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.13.1/atelier-linux-x64"
-      sha256 "e70e7bf24d2d54eac39ac3de55322184e13eeab8980d1eefaee71c312dd0433a"
+      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.14.0/atelier-linux-x64"
+      sha256 "819d990a4b9905b193e5d005e6f36fe04692beab55ab4423896ede55d9300091"
     end
   end
 
