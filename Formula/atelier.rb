@@ -1,36 +1,25 @@
 class Atelier < Formula
   desc "Visual board and multi-project dashboard for tracked work"
   homepage "https://github.com/AhsanSarwar45/atelier"
-  version "0.21.1"
+  version "0.22.2"
   license "MIT"
 
-  # No `depends_on "node"`. Homebrew would install its own node and link it
-  # ahead of whatever node manager the reader already runs — which is how most
-  # people who have node have it — and a program that quietly changes which node
-  # their other work is built with has done them more harm than a missing chat.
-  # The chat is never silently dead either way: the program says, in words, that
-  # it could not run npm and what that costs.
+  # Chat orchestration is implemented in Rust. The provider adapters are pinned,
+  # self-contained executables, so Node/npm/Python remain build-time-only tools.
 
-  on_macos do
-    on_arm do
-      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.21.1/atelier-darwin-arm64"
-      sha256 "20466adc527e330d880268727a34621ec2d0039038b53c33a54df5494e4a4f1b"
-    end
-    on_intel do
-      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.21.1/atelier-darwin-x64"
-      sha256 "b87553bf67d7572d0fbd6b5ff308b59bdd0ecd1ad209db6b1665c18febf42a1d"
-    end
-  end
+  depends_on :linux
+  depends_on arch: :x86_64
 
   on_linux do
     on_intel do
-      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.21.1/atelier-linux-x64"
-      sha256 "3f8963793a234676d6f159abddf34a933951200ec8739d129861d74d97c7ca80"
+      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.22.2/atelier-linux-x64.tar.gz"
+      sha256 "0cb14eb9b8ca94a5829c19e016bbfda0e311e06ecbf0ee5b50b0d844e39f0da5"
     end
   end
 
   def install
-    bin.install Dir["atelier-*"].first => "atelier"
+    bin.install "atelier"
+    libexec.install "atelier-adapters"
   end
 
   def caveats
@@ -44,12 +33,15 @@ class Atelier < Formula
       It answers your whole network, so the board opens on your phone —
       starting it prints the address to type there.
 
-      The Chat tab needs node and npm on your PATH — your own, whichever way you
-      install them. Without them the board and the screens still work, and the
-      chat says what is missing.
+      The Chat tab and its provider adapters are bundled, so you need neither
+      Node, npm, Python, nor a separately installed ACP adapter.
 
-      `init` needs python3 and the Beads CLI (bd) on your PATH:
+      Project tracking needs git and the Beads CLI (bd):
         https://github.com/gastownhall/beads
+
+      None of these has to be on your PATH. Atelier looks there first, then in
+      the ordinary places an installer writes to, which is how the copy started
+      at login finds them with no shell behind it.
     EOS
   end
 
