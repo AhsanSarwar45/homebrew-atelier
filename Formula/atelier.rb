@@ -1,7 +1,7 @@
 class Atelier < Formula
   desc "Visual board and multi-project dashboard for tracked work"
   homepage "https://github.com/AhsanSarwar45/atelier"
-  version "0.24.0"
+  version "0.25.0"
   license "MIT"
 
   # Chat orchestration is implemented in Rust. The provider adapters are pinned,
@@ -12,8 +12,8 @@ class Atelier < Formula
 
   on_linux do
     on_intel do
-      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.24.0/atelier-linux-x64.tar.gz"
-      sha256 "5f5938d5d0b68d62b57b3d16338ac7539cbb9273b861ad4c4a019acb635e732a"
+      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.25.0/atelier-linux-x64.tar.gz"
+      sha256 "0ea4fd7230ac024c4756e3da85bd355eb44f976dfd176345d15a38a3d6393a5c"
     end
   end
 
@@ -30,14 +30,13 @@ class Atelier < Formula
         atelier service install  have this computer start it at login
         atelier init             set the project in this folder up on it
 
-      It answers your whole network, so the board opens on your phone —
+      It answers your whole network, so the app opens on your phone —
       starting it prints the address to type there.
 
       The Chat tab and its provider adapters are bundled, so you need neither
       Node, npm, Python, nor a separately installed ACP adapter.
 
-      Project tracking needs git and the Beads CLI (bd):
-        https://github.com/gastownhall/beads
+      Projects need git.
 
       None of these has to be on your PATH. Atelier looks there first, then in
       the ordinary places an installer writes to, which is how the copy started
