@@ -1,7 +1,7 @@
 class Atelier < Formula
   desc "Visual board and multi-project dashboard for tracked work"
   homepage "https://github.com/AhsanSarwar45/atelier"
-  version "0.25.10"
+  version "0.25.11"
   license "MIT"
 
   # Chat orchestration is implemented in Rust. The provider adapters are pinned,
@@ -12,8 +12,8 @@ class Atelier < Formula
 
   on_linux do
     on_intel do
-      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.25.10/atelier-linux-x64.tar.gz"
-      sha256 "cd25a806fce45ff94ed911f0862a485e86448643da4fb2bae2db9c3885f2c6af"
+      url "https://github.com/AhsanSarwar45/atelier/releases/download/v0.25.11/atelier-linux-x64.tar.gz"
+      sha256 "ad2a5d22e41eb19c30eef63fab8bb4dc784ffe9c210d5adf640bc381354a73fa"
     end
   end
 
